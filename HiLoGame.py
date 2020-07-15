@@ -16,6 +16,12 @@ while playAgain in ["Yes", "yes", "y", "Y"]:
         gameRange = input("This is a guessing game. Please select how high of a range you would like to play. ")
         #We use .isdigit to figure out if the number our user input is even a number.
         if gameRange.isdigit():
+            if gameRange in ["69", "420"]:
+                print("Haha nice.")
+            elif gameRange == "07":
+                print("Go play an actual shitty game, like Elite: Dangerous, you shitlord.")
+            elif gameRange == "1337":
+                print("Yeah I bet you feel pretty leet, huh skiddie?")
             break
         else:
             #We use an f string to cleanly output the error for the user.
