@@ -1,0 +1,43 @@
+#K. Davenport
+#FOR COLLEGE
+#July 31st, 2020
+#The famous fizz-buzz problem, but in Python.
+
+#REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+def __fizz_buzz__():
+    if steppingValue % 15 == 0:
+        statement = "BOTH"
+    elif steppingValue % 3 == 0:
+        statement = "3"
+    elif steppingValue % 5 == 0:
+        statement = "5"
+    else: statement = "NEITHER"
+    print(f"{steppingValue} is divisible by {statement}.")
+    return;
+
+def __error_message__():
+    print("Please input a number.")
+    return;
+
+print("I'm the fizz-buzz problem. You will often find me as an interview question.\nToday we're going to find out what numbers are divisible by 3, 5, and both.")
+
+while True:
+    startingValue = input("\nLet's get started by inputting your starting value. ")
+    if startingValue.isdigit():
+        startingValue = int(startingValue)
+        break
+    else: __error_message__()
+
+while True:
+    endingValue = input("Looking great! What's the value you would like to end at? ")
+    if endingValue.isdigit():
+        endingValue = int(endingValue)
+        break
+    else: __error_message__()
+
+print(f"Okay! I'm going to tell you which numbers between {startingValue} and {endingValue} are divisible by 3, 5, or both!\n")
+steppingValue = startingValue
+while steppingValue <= endingValue:
+
+    __fizz_buzz__()
+    steppingValue= steppingValue + 1
